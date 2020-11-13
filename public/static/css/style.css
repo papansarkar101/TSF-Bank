@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Do Hyeon", sans-serif;
+  box-sizing: border-box;
+}
+
+.top-bar {
+  margin: 16px;
+}
+
+.top-bar .title {
+  font-size: 2rem;
+  padding: 10px;
+}
+
+.top-bar .link {
+  float: right;
+  padding: 10px;
+  font-size: 1.3rem;
+}
+
+nav {
+  /* fixed keyword is fine too */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  overflow: hidden;
+  background-color: #fff;
+  /* z-index works pretty much like a layer:
+   the higher the z-index value, the greater
+   it will allow the navigation tag to stay on top
+   of other tags */
+}
+
+a {
+  text-decoration: none !important;
+}
+
+a:hover {
+  /* background-color: yellow; */
+  color: green !important;
+}
+
+.big-button {
+  text-align: center;
+  padding: 15px;
+}
+
+.big-button input[type="search"] {
+  float: center;
+  padding: 10px 40px;
+  margin-top: 5px;
+  margin-right: 16px;
+  font-size: 16px;
+}
+
+.big-button input[type="button"] {
+  float: center;
+  padding: 10px 20px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.heading {
+  text-align: center;
+  font-size: 2em;
+  padding: 10px;
+}
+
+.button:hover {
+  background-color: greenyellow;
+}
+
+#slider {
+  width: 100%;
+}
+
+.carousel-caption h2 {
+  color: #fff;
+  font-size: 32px;
+}
+
+.button {
+  background-color: #008cba;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+}
+
+/* About page */
+
+.about {
+  margin: 50px;
+}
+
+.know-more {
+  float: right;
+}
+
+.icons {
+  padding: 10px;
+}
+
+.icons .icon {
+  padding: 10px;
+}
+
+.our-business {
+  margin: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+}
+
+.icons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto auto;
+}
+
+.our-business .grid {
+  padding: 20px;
+}
+
+.margin {
+  margin: 50px !important;
+}
+
+label {
+  font-size: 1.2em !important;
+}
+
+footer {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(cover.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #efefef !important;
+  background-attachment: fixed;
+  padding-bottom: 15px;
+}
