@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TSF Bank - Basic Banking System</title>
+
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+
+    h3 {
+        text-align: center;
+        padding: 10px;
+    }
+
+    input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    }
+
+    input[type=email], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    }
+
+    input[type=number], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    }
+
+    input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+    background-color: #45a049;
+    }
+
+    .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    }
+    </style>
+
+</head>
+<body>
+
+    <script>
+        function success() {
+	        if(document.getElementById("fname").value==="" || document.getElementById("email").value==="" || document.getElementById("number").value==="" || document.getElementById("subject").value==="") { 
+                console.log('Hi');
+            document.getElementById('submit-button').disabled = true; 
+            } else { 
+            document.getElementById('submit-button').disabled = false;
+        }
+        }
+    </script>
+
+<nav>
+    <div class="top-bar">
+        <a href="/" class="title">
+            TSF Bank
+            </a>
+
+            <a href="/contact" class="link">
+                Contact us
+            </a>
+
+            <a href="/about" class="link">
+                About
+            </a>
+
+            <a href="/transactions" class="link">
+                Transactions
+            </a>
+
+            <a href="/banking" class="link">
+                Banking
+            </a>
+
+            <a href="/" class="link">
+                Home
+        </a>
+    </div>
+</nav>
+
+    <h3>Contact Form</h3>
+    <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
+        a matter of hours to help you.</p>
+
+    <div class="container">
+        <form action="">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" onkeyup="success()" name="fname" placeholder="Your name..">
+
+            <label for="email">E-mail</label>
+            <input type="email" onkeyup="success()" id="email" name="email" placeholder="Your email..">
+
+            <label for="phone">Phone</label>
+            <input type="number" id="number" onkeyup="success()" name="number" placeholder="Your phone number..">
+
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" onkeyup="success()" placeholder="Write something.." style="height:200px"></textarea>
+
+            <div class="container">
+                <div class="row">
+                  <div class="col text-center">
+                    <input class="btn btn-default btn-secondary " type="reset" size="200" value="Reset Fields">
+                </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <input id="submit-button" class="btn btn-primary" type="submit" value="Submit" data-dismiss="modal" data-toggle="modal" data-target="#exampleModal">
+            </div>
+        
+        </form>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Thank You</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Thank You for your response, we'll get back to your query as soon as possible.
+            </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    
+       <!-- Footer -->
+<footer class="page-footer font-small cyan darken-3">
+    <br> <br>
+    <h3> Let's get connected and work together </h3>
+
+    <!-- Footer Elements -->
+    <div id="contact" class="container">
+  
+      <!-- Grid row-->
+      <div class="row">
+  
+        <!-- Grid column -->
+        <div class="col-md-12 py-5">
+          <div class="mb-5 flex-center">
+  
+            <!-- Facebook -->
+            <a class="fb-ic" href="https://www.facebook.com/papansarkar1.1" target="_blank">
+              <i class="fa fa-facebook fa-lg white-text mr-md-5 mr-3 fa-2x" aria-hidden="true"></i>
+            </a>
+            <!-- Linkedin -->
+            <a class="ln-ic" href="https://www.linkedin.com/in/papansarkar101/" target="_blank">
+              <i class="fa fa-linkedin fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <!-- github +-->
+            <a class="git-ic" href="https://github.com/papansarkar101" target="_blank">
+              <i class="fa fa-github fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <!-- instagram -->
+            <a class="in-ic" href="https://www.instagram.com/papansarkar101/" target="_blank">
+              <i class="fa fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <a class="tw-ic" href="https://twitter.com/papansarkar101" target="_blank">
+                <i class="fa fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+              </a>
+          </div>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row-->
+    </div>
+    <!-- Footer Elements -->
+    
+    
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">
+      <br>
+      This Porject is made by <a href="https://www.linkedin.com/in/papansarkar101/"> Papan Sarkar </a> while doing internship in <a href="https://www.thesparksfoundationsingapore.org/"> The Sparks Foundation </a> <br>
+      © 2020 Copyright:<a href="https://github.com/papansarkar101"> Papan Sarkar </a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
+
+</body>
+</html>
