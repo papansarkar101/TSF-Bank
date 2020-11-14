@@ -1,10 +1,12 @@
-
+const  PORT = process.env.PORT || 3000
 const express= require('express');
 const app = express();
 const mongoose =require('mongoose');
 const Customer = require('./model/customer');
 const Transaction = require('./model/transaction');
+const dotenv =require('dotenv').config('./config.env');
 
+console.log(process.env)
 
 app.use(express.urlencoded({extended:true}));
 app.use(express.json(true));
@@ -16,7 +18,7 @@ app.set('view engine','ejs');
 app.set('views','views');
 
 //===============DATABASE CONNECTION=====================//
-mongoose.connect('mongodb+srv://admin:123159@cluster0.t2sgy.mongodb.net/<dbname>?retryWrites=true&w=majority',{ useNewUrlParser: true, useUnifiedTopology: true },(err)=>{
+mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.t2sgy.mongodb.net/<dbname>?retryWrites=true&w=majority`,{ useNewUrlParser: true, useUnifiedTopology: true },(err)=>{
 if(!err){
     console.log('DB connected!');
 }
@@ -87,6 +89,6 @@ app.post('/transfer/:username',async(req,res,next)=>{
     });
    
 })
-app.listen(3000,()=>{
+app.listen(PORT,()=>{
     console.log('server is running on port 3000');
 })
